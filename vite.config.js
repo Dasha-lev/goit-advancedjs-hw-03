@@ -20,6 +20,7 @@ export default defineConfig(({ command }) => {
               return 'vendor';
             }
           },
+      
           entryFileNames: chunkInfo => {
             if (chunkInfo.name === 'commonHelpers') {
               return 'commonHelpers.js';
