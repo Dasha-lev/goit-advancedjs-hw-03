@@ -6,6 +6,7 @@ import SortCss from 'postcss-sort-media-queries';
 
 export default defineConfig(({ command }) => {
   return {
+    base: '/goit-advancedjs-hw-03/', // ✅ ДОДАЙ СЮДИ СВОЮ НАЗВУ РЕПОЗИТОРІЮ
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
@@ -20,7 +21,6 @@ export default defineConfig(({ command }) => {
               return 'vendor';
             }
           },
-      
           entryFileNames: chunkInfo => {
             if (chunkInfo.name === 'commonHelpers') {
               return 'commonHelpers.js';
